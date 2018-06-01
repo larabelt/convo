@@ -4,7 +4,7 @@ use Mockery as m;
 
 use Belt\Convo\Alert;
 use Belt\Core\Testing\BeltTestCase;
-use Belt\convo\Http\ViewComposers\AlertsComposer;
+use Belt\Convo\Http\ViewComposers\AlertsComposer;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Collection;
 

@@ -3,7 +3,7 @@
 Add the ServiceProvider to the providers array in config/app.php
 
 ```php
-Belt\convo\BeltconvoServiceProvider::class,
+Belt\Convo\BeltconvoServiceProvider::class,
 ```
 
 ```

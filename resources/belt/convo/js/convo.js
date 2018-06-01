@@ -1,4 +1,5 @@
 import alerts from 'belt/convo/js/alerts/routes';
+import store from 'belt/core/js/store/index';
 
 window.larabelt.convo = _.get(window, 'larabelt.convo', {});
 

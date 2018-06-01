@@ -31,12 +31,9 @@ class PublishCommand extends Command
      */
     protected $dirs = [
         'vendor/larabelt/convo/config' => 'config/belt',
-        //'vendor/larabelt/convo/resources/js' => 'resources/belt/convo/js',
-        //'vendor/larabelt/convo/resources/sass' => 'resources/belt/convo/sass',
         'vendor/larabelt/convo/database/factories' => 'database/factories',
         'vendor/larabelt/convo/database/migrations' => 'database/migrations',
         'vendor/larabelt/convo/database/seeds' => 'database/seeds',
-        'vendor/larabelt/convo/database/testing' => 'database/testing',
     ];
 
     /**

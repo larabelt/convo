@@ -1,7 +1,9 @@
 <?php
 namespace Belt\Convo\Http\Requests;
 
-class PaginateAlerts extends PaginateRequest
+use Belt;
+
+class PaginateAlerts extends Belt\Core\Http\Requests\PaginateRequest
 {
     public $perPage = 5;
 

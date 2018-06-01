@@ -1,6 +1,6 @@
 <?php
 
-use Belt\convo\Http\Controllers\Api;
+use Belt\Convo\Http\Controllers\Api;
 
 Route::group([
     'prefix' => 'api/v1',

@@ -1,7 +1,7 @@
 <?php
 
 use Mockery as m;
-use Belt\convo\Commands\AlertCommand;
+use Belt\Convo\Commands\AlertCommand;
 use Belt\Convo\Services\AlertService;
 
 class AlertCommandTest extends \PHPUnit\Framework\TestCase

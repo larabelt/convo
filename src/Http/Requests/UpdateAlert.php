@@ -1,11 +1,13 @@
 <?php
 namespace Belt\Convo\Http\Requests;
 
+use Belt;
+
 /**
  * Class UpdateAlert
  * @package Belt\Convo\Http\Requests
  */
-class UpdateAlert extends FormRequest
+class UpdateAlert extends Belt\Core\Http\Requests\FormRequest
 {
 
     /**

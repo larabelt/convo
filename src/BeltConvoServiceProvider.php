@@ -66,6 +66,7 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
 
         // commands
         $this->commands(Belt\Convo\Commands\AlertCommand::class);
+        $this->commands(Belt\Convo\Commands\PublishCommand::class);
 
         // morphMap
         Relation::morphMap([
