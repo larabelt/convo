@@ -43,9 +43,6 @@
   "autoload": {
     "psr-4": {
       "Belt\\Convo\\": "src/"
-    },
-    "files": [
-      "src/helpers.php"
-    ]
+    }
   }
 }
