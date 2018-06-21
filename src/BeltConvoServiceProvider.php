@@ -45,9 +45,6 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
         $this->app['belt']->addPackage('convo', ['dir' => __DIR__ . '/..']);
         $this->app['belt']->publish('belt-convo:publish');
         $this->app['belt']->seeders('BeltConvoSeeder');
-
-        // access map for window config
-        Belt\Core\Services\AccessService::put('*', 'alerts');
     }
 
     /**
@@ -81,6 +78,8 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
             return Belt\Convo\Alert::sluggish($value)->first();
         });
 
+        // access map for window config
+        Belt\Core\Services\AccessService::put('*', 'alerts');
     }
 
     /**
