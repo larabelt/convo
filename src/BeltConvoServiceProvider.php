@@ -45,6 +45,9 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
         $this->app['belt']->addPackage('convo', ['dir' => __DIR__ . '/..']);
         $this->app['belt']->publish('belt-convo:publish');
         $this->app['belt']->seeders('BeltConvoSeeder');
+
+        // cookies encryption exception
+        Belt\Core\Http\Middleware\EncryptCookies::except('alerts');
     }
 
     /**
