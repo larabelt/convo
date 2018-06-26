@@ -5,6 +5,7 @@ use Mockery as m;
 use Belt\Convo\Alert;
 use Belt\Core\Testing\BeltTestCase;
 use Belt\Convo\Http\ViewComposers\AlertsComposer;
+use Belt\Convo\Services\AlertService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Collection;
 
@@ -18,6 +19,7 @@ class AlertsComposerTest extends BeltTestCase
     /**
      * @covers \Belt\Convo\Http\ViewComposers\AlertsComposer::__construct()
      * @covers \Belt\Convo\Http\ViewComposers\AlertsComposer::compose()
+     * @covers \Belt\Convo\Http\ViewComposers\AlertsComposer::service()
      */
     public function test()
     {
@@ -41,6 +43,9 @@ class AlertsComposerTest extends BeltTestCase
         $view = m::mock(\Illuminate\View\View::class);
         $view->shouldReceive('with')->once()->with('alerts', $composer->alerts);
         $composer->compose($view);
+
+        # service
+        $this->assertInstanceOf(AlertService::class, $composer->service());
     }
 
 }

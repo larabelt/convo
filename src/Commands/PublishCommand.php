@@ -2,12 +2,11 @@
 
 namespace Belt\Convo\Commands;
 
-use Belt\Core\Services\PublishService;
-use Illuminate\Console\Command;
+use Belt\Core\Commands\PublishCommand as Command;
 
 /**
  * Class PublishCommand
- * @package Belt\Convo\Commands
+ * @package Belt\Content\Commands
  */
 class PublishCommand extends Command
 {
@@ -35,84 +34,5 @@ class PublishCommand extends Command
         'vendor/larabelt/convo/database/migrations' => 'database/migrations',
         'vendor/larabelt/convo/database/seeds' => 'database/seeds',
     ];
-
-    /**
-     * @var array
-     */
-    protected $files = [];
-
-    /**
-     * @var PublishService
-     */
-    private $service;
-
-    /**
-     * Execute the console command.
-     *
-     * @return mixed
-     */
-    public function handle()
-    {
-
-        $action = $this->argument('action');
-
-        $service = $this->service();
-
-        if ($action == 'update') {
-            $service->update();
-        }
-
-        if ($action == 'publish') {
-            $this->publish($service);
-        }
-    }
-
-    /**
-     * Publish contents
-     *
-     * @param $service
-     */
-    public function publish($service)
-    {
-        $service->publish();
-
-        if ($service->created) {
-            $this->info("\nThe following files were added:\n");
-            foreach ($service->created as $file) {
-                $this->info($file);
-            }
-        }
-
-        if ($service->modified) {
-            $this->info("\nThe following files were overwritten:\n");
-            foreach ($service->modified as $file) {
-                $this->info($file);
-            }
-        }
-
-        if ($service->ignored) {
-            $this->warn("\nThe following files were ignored though source files have changed:\n");
-            foreach ($service->ignored as $file) {
-                $this->warn($file);
-            }
-        }
-    }
-
-    /**
-     * @return PublishService
-     */
-    public function service()
-    {
-        $this->service = $this->service ?: new PublishService([
-            'dirs' => $this->dirs,
-            'files' => $this->files,
-            'force' => $this->option('force'),
-            'include' => $this->option('include'),
-            'exclude' => $this->option('exclude'),
-            'config' => $this->option('config'),
-        ]);
-
-        return $this->service;
-    }
 
 }
