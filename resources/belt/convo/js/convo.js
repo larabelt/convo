@@ -24,10 +24,6 @@ export default class BeltConvo {
 
             const app = new Vue({router, store}).$mount('#belt-convo');
         }
-
-        let modals = new Vue({
-            el: '#vue-modals'
-        });
     }
 
     addComponent(Class) {
