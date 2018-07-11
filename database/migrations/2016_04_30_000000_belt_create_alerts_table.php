@@ -33,6 +33,6 @@ class BeltCreateAlertsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('alerts');
+        Schema::dropIfExists('alerts');
     }
 }
