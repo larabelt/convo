@@ -28,7 +28,13 @@ class BeltUpdateAlertsTable1 extends Migration
     {
         Schema::table('alerts', function (Blueprint $table) {
             $table->dropColumn('show_url');
+        });
+
+        Schema::table('alerts', function (Blueprint $table) {
             $table->dropColumn('url');
+        });
+
+        Schema::table('alerts', function (Blueprint $table) {
             $table->dropColumn('intro');
         });
     }
