@@ -22,7 +22,7 @@ class AlertsFunctionalTest extends Testing\BeltTestCase
             'body' => 'test',
         ]);
         $response->assertStatus(201);
-        $response->assertJsonFragment(['id']);
+        $response->assertJsonFragment(['name' => 'TEST']);
         $alertID = array_get($response->json(), 'id');
 
         # show
