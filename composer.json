@@ -1,6 +1,6 @@
 {
   "name": "larabelt/notify",
-  "description": "Convo package for any LaraBelt app.",
+  "description": "Notify package for any LaraBelt app.",
   "keywords": [
     "cms",
     "laravel",
