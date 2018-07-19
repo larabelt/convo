@@ -1,9 +1,9 @@
 // helpers
-import Table from 'belt/convo/js/alerts/table';
+import Table from 'belt/notify/js/alerts/table';
 
 // templates make a change
 
-import index_html from 'belt/convo/js/alerts/templates/index.html';
+import index_html from 'belt/notify/js/alerts/templates/index.html';
 
 export default {
 

@@ -1,11 +1,11 @@
 <?php
-namespace Belt\Convo\Http\Requests;
+namespace Belt\Notify\Http\Requests;
 
 use Belt;
 
 /**
  * Class StoreAlert
- * @package Belt\Convo\Http\Requests
+ * @package Belt\Notify\Http\Requests
  */
 class StoreAlert extends Belt\Core\Http\Requests\FormRequest
 {

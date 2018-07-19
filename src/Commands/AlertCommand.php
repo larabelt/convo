@@ -1,13 +1,13 @@
 <?php
 
-namespace Belt\Convo\Commands;
+namespace Belt\Notify\Commands;
 
-use Belt\Convo\Services\AlertService;
+use Belt\Notify\Services\AlertService;
 use Illuminate\Console\Command;
 
 /**
  * Class AlertCommand
- * @package Belt\Convo\Commands
+ * @package Belt\Notify\Commands
  */
 class AlertCommand extends Command
 {
@@ -16,7 +16,7 @@ class AlertCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'belt-convo:alerts';
+    protected $signature = 'belt-notify:alerts';
 
     /**
      * The console command description.

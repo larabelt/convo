@@ -1,6 +1,6 @@
 <?php
 
-namespace Belt\Convo\Commands;
+namespace Belt\Notify\Commands;
 
 use Belt\Core\Commands\PublishCommand as Command;
 
@@ -16,23 +16,23 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'belt-convo:publish {action=publish} {--force} {--include=} {--exclude=} {--config}';
+    protected $signature = 'belt-notify:publish {action=publish} {--force} {--include=} {--exclude=} {--config}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'publish assets for belt convo';
+    protected $description = 'publish assets for belt notify';
 
     /**
      * @var array
      */
     protected $dirs = [
-        'vendor/larabelt/convo/config' => 'config/belt',
-        'vendor/larabelt/convo/database/factories' => 'database/factories',
-        'vendor/larabelt/convo/database/migrations' => 'database/migrations',
-        'vendor/larabelt/convo/database/seeds' => 'database/seeds',
+        'vendor/larabelt/notify/config' => 'config/belt',
+        'vendor/larabelt/notify/database/factories' => 'database/factories',
+        'vendor/larabelt/notify/database/migrations' => 'database/migrations',
+        'vendor/larabelt/notify/database/seeds' => 'database/seeds',
     ];
 
 }

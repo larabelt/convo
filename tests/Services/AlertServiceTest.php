@@ -2,8 +2,8 @@
 
 use Mockery as m;
 
-use Belt\Convo\Alert;
-use Belt\Convo\Services\AlertService;
+use Belt\Notify\Alert;
+use Belt\Notify\Services\AlertService;
 use Belt\Core\Testing;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Builder;
@@ -17,9 +17,9 @@ class AlertServiceTest extends Testing\BeltTestCase
     }
 
     /**
-     * @covers \Belt\Convo\Services\AlertService::init
-     * @covers \Belt\Convo\Services\AlertService::cache
-     * @covers \Belt\Convo\Services\AlertService::query
+     * @covers \Belt\Notify\Services\AlertService::init
+     * @covers \Belt\Notify\Services\AlertService::cache
+     * @covers \Belt\Notify\Services\AlertService::query
      */
     public function test()
     {

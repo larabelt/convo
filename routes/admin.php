@@ -7,8 +7,8 @@ Route::group([
     function () {
 
         # admin/belt/core home
-        Route::get('belt/convo/{any?}', function () {
-            return view('belt-convo::base.admin.dashboard');
+        Route::get('belt/notify/{any?}', function () {
+            return view('belt-notify::base.admin.dashboard');
         })->where('any', '(.*)');
     }
 );

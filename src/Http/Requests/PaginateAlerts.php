@@ -1,5 +1,5 @@
 <?php
-namespace Belt\Convo\Http\Requests;
+namespace Belt\Notify\Http\Requests;
 
 use Belt;
 

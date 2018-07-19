@@ -1,13 +1,13 @@
 <?php
 
-namespace Belt\Convo\Services;
+namespace Belt\Notify\Services;
 
 use Cache;
-use Belt\Convo\Alert;
+use Belt\Notify\Alert;
 
 /**
  * Class AlertService
- * @package Belt\Convo\Services
+ * @package Belt\Notify\Services
  */
 class AlertService
 {

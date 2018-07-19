@@ -1,9 +1,9 @@
-import alerts from 'belt/convo/js/alerts/routes';
+import alerts from 'belt/notify/js/alerts/routes';
 import store from 'belt/core/js/store/index';
 
-window.larabelt.convo = _.get(window, 'larabelt.convo', {});
+window.larabelt.notify = _.get(window, 'larabelt.notify', {});
 
-export default class BeltConvo {
+export default class BeltNotify {
 
     constructor(components = []) {
         this.components = [];
@@ -12,17 +12,17 @@ export default class BeltConvo {
             this.addComponent(value);
         });
 
-        if ($('#belt-convo').length > 0) {
+        if ($('#belt-notify').length > 0) {
 
             const router = new VueRouter({
                 mode: 'history',
-                base: '/admin/belt/convo',
+                base: '/admin/belt/notify',
                 routes: []
             });
 
             router.addRoutes(alerts);
 
-            const app = new Vue({router, store}).$mount('#belt-convo');
+            const app = new Vue({router, store}).$mount('#belt-notify');
         }
     }
 

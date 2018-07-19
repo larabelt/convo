@@ -1,10 +1,10 @@
 <?php
 
-namespace Belt\Convo\Http\ViewComposers;
+namespace Belt\Notify\Http\ViewComposers;
 
 use Belt, Cache, Cookie;
-use Belt\Convo\Alert;
-use Belt\Convo\Services\AlertService;
+use Belt\Notify\Alert;
+use Belt\Notify\Services\AlertService;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\View\View;
 

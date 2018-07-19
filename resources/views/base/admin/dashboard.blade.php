@@ -6,7 +6,7 @@
 
 @section('main')
 
-    <div id="belt-convo">
+    <div id="belt-notify">
         <router-view></router-view>
     </div>
 

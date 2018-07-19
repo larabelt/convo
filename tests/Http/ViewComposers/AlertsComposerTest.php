@@ -2,10 +2,10 @@
 
 use Mockery as m;
 
-use Belt\Convo\Alert;
+use Belt\Notify\Alert;
 use Belt\Core\Testing\BeltTestCase;
-use Belt\Convo\Http\ViewComposers\AlertsComposer;
-use Belt\Convo\Services\AlertService;
+use Belt\Notify\Http\ViewComposers\AlertsComposer;
+use Belt\Notify\Services\AlertService;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Collection;
 
@@ -17,9 +17,9 @@ class AlertsComposerTest extends BeltTestCase
     }
 
     /**
-     * @covers \Belt\Convo\Http\ViewComposers\AlertsComposer::__construct()
-     * @covers \Belt\Convo\Http\ViewComposers\AlertsComposer::compose()
-     * @covers \Belt\Convo\Http\ViewComposers\AlertsComposer::service()
+     * @covers \Belt\Notify\Http\ViewComposers\AlertsComposer::__construct()
+     * @covers \Belt\Notify\Http\ViewComposers\AlertsComposer::compose()
+     * @covers \Belt\Notify\Http\ViewComposers\AlertsComposer::service()
      */
     public function test()
     {

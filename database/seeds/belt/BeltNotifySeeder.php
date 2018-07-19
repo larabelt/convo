@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class BeltConvoSeeder extends Seeder
+class BeltNotifySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class BeltConvoSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(BeltConvoAlertSeeds::class);
+        $this->call(BeltNotifyAlertSeeds::class);
     }
 }

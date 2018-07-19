@@ -1,8 +1,8 @@
 <?php
 
 use Mockery as m;
-use Belt\Convo\Commands\AlertCommand;
-use Belt\Convo\Services\AlertService;
+use Belt\Notify\Commands\AlertCommand;
+use Belt\Notify\Services\AlertService;
 
 class AlertCommandTest extends \PHPUnit\Framework\TestCase
 {
@@ -13,8 +13,8 @@ class AlertCommandTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @covers \Belt\Convo\Commands\AlertCommand::service
-     * @covers \Belt\Convo\Commands\AlertCommand::handle
+     * @covers \Belt\Notify\Commands\AlertCommand::service
+     * @covers \Belt\Notify\Commands\AlertCommand::handle
      */
     public function test()
     {

@@ -1,9 +1,9 @@
 // helpers
-import Form from 'belt/convo/js/alerts/form';
-import Table from 'belt/convo/js/alerts/users/table';
+import Form from 'belt/notify/js/alerts/form';
+import Table from 'belt/notify/js/alerts/users/table';
 
 // templates
-import index_html from 'belt/convo/js/alerts/users/templates/index.html';
+import index_html from 'belt/notify/js/alerts/users/templates/index.html';
 
 export default {
     data() {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Belt\Convo;
+namespace Belt\Notify;
 
 use Belt, Barryvdh, Collective, Illuminate, Laravel, Rap2hpoutre, Silber;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
@@ -9,10 +9,10 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Router;
 
 /**
- * class BeltConvoServiceProvider
- * @package Belt\Convo
+ * class BeltNotifyServiceProvider
+ * @package Belt\Notify
  */
-class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
+class BeltNotifyServiceProvider extends Belt\Core\BeltServiceProvider
 {
 
     /**
@@ -28,7 +28,7 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
      * @var array
      */
     protected $policies = [
-        Belt\Convo\Alert::class => Belt\Convo\Policies\AlertPolicy::class,
+        Belt\Notify\Alert::class => Belt\Notify\Policies\AlertPolicy::class,
     ];
 
     /**
@@ -42,9 +42,9 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
         include __DIR__ . '/../routes/api.php';
 
         // beltable values for global belt command
-        $this->app['belt']->addPackage('convo', ['dir' => __DIR__ . '/..']);
-        $this->app['belt']->publish('belt-convo:publish');
-        $this->app['belt']->seeders('BeltConvoSeeder');
+        $this->app['belt']->addPackage('notify', ['dir' => __DIR__ . '/..']);
+        $this->app['belt']->publish('belt-notify:publish');
+        $this->app['belt']->seeders('BeltNotifySeeder');
 
         // cookies encryption exception
         Belt\Core\Http\Middleware\EncryptCookies::except('alerts');
@@ -59,26 +59,26 @@ class BeltConvoServiceProvider extends Belt\Core\BeltServiceProvider
     {
 
         // set backup view paths
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'belt-convo');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'belt-notify');
 
         // set backup translation paths
-        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'belt-convo');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'belt-notify');
 
         // policies
         $this->registerPolicies($gate);
 
         // commands
-        $this->commands(Belt\Convo\Commands\AlertCommand::class);
-        $this->commands(Belt\Convo\Commands\PublishCommand::class);
+        $this->commands(Belt\Notify\Commands\AlertCommand::class);
+        $this->commands(Belt\Notify\Commands\PublishCommand::class);
 
         // morphMap
         Relation::morphMap([
-            'alerts' => Belt\Convo\Alert::class,
+            'alerts' => Belt\Notify\Alert::class,
         ]);
 
         // route model binding
-        $router->model('alert', Belt\Convo\Alert::class, function ($value) {
-            return Belt\Convo\Alert::sluggish($value)->first();
+        $router->model('alert', Belt\Notify\Alert::class, function ($value) {
+            return Belt\Notify\Alert::sluggish($value)->first();
         });
 
         // access map for window config

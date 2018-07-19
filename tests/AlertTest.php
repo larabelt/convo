@@ -2,7 +2,7 @@
 
 use Mockery as m;
 use Belt\Core\Testing\BeltTestCase;
-use Belt\Convo\Alert;
+use Belt\Notify\Alert;
 use Illuminate\Database\Eloquent\Builder;
 
 class AlertTest extends BeltTestCase
@@ -13,8 +13,8 @@ class AlertTest extends BeltTestCase
     }
 
     /**
-     * @covers \Belt\Convo\Alert::setNameAttribute
-     * @covers \Belt\Convo\Alert::scopeActive
+     * @covers \Belt\Notify\Alert::setNameAttribute
+     * @covers \Belt\Notify\Alert::scopeActive
      */
     public function test()
     {

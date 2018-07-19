@@ -1,10 +1,10 @@
 <?php
 
-namespace Belt\Convo\Http\Controllers\Api;
+namespace Belt\Notify\Http\Controllers\Api;
 
-use Belt\Convo\Alert;
-use Belt\Convo\Services\AlertService;
-use Belt\Convo\Http\Requests;
+use Belt\Notify\Alert;
+use Belt\Notify\Services\AlertService;
+use Belt\Notify\Http\Requests;
 use Belt\Core\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 

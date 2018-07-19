@@ -1,13 +1,13 @@
 <?php
 
-namespace Belt\Convo\Policies;
+namespace Belt\Notify\Policies;
 
 use Belt;
-use Belt\Convo\Alert;
+use Belt\Notify\Alert;
 
 /**
  * Class AlertPolicy
- * @package Belt\Convo\Policies
+ * @package Belt\Notify\Policies
  */
 class AlertPolicy extends Belt\Core\Policies\BaseAdminPolicy
 {

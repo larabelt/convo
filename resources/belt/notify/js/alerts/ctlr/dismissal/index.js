@@ -1,5 +1,5 @@
 import Cookies from 'belt/core/js/helpers/cookies';
-import html from 'belt/convo/js/alerts/ctlr/dismissal/template.html';
+import html from 'belt/notify/js/alerts/ctlr/dismissal/template.html';
 
 export default {
     props: {

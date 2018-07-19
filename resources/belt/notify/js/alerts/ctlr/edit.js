@@ -1,10 +1,10 @@
 // helpers
-import Form from 'belt/convo/js/alerts/form';
+import Form from 'belt/notify/js/alerts/form';
 
 // templates make a change
 
-import edit_html from 'belt/convo/js/alerts/templates/edit.html';
-import form_html from 'belt/convo/js/alerts/templates/form.html';
+import edit_html from 'belt/notify/js/alerts/templates/edit.html';
+import form_html from 'belt/notify/js/alerts/templates/form.html';
 
 export default {
     data() {

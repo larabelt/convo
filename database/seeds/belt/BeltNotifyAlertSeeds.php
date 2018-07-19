@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
-use Belt\Convo\Alert;
+use Belt\Notify\Alert;
 
-class BeltConvoAlertSeeds extends Seeder
+class BeltNotifyAlertSeeds extends Seeder
 {
     /**
      * Run the database seeds.

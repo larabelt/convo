@@ -1,6 +1,6 @@
-import index from 'belt/convo/js/alerts/ctlr/index';
-import create from 'belt/convo/js/alerts/ctlr/create';
-import edit  from 'belt/convo/js/alerts/ctlr/edit';
+import index from 'belt/notify/js/alerts/ctlr/index';
+import create from 'belt/notify/js/alerts/ctlr/create';
+import edit  from 'belt/notify/js/alerts/ctlr/edit';
 
 export default [
     {path: '/alerts', component: index, canReuse: false, name: 'alerts'},

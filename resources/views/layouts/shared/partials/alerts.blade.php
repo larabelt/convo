@@ -1,3 +1,3 @@
 @isset($alerts)
-    @each('belt-convo::layouts.shared.partials._alert', $alerts, 'alert')
+    @each('belt-notify::layouts.shared.partials._alert', $alerts, 'alert')
 @endif
