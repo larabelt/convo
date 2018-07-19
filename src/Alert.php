@@ -1,6 +1,6 @@
 <?php
 
-namespace Belt\Convo;
+namespace Belt\Notify;
 
 use Belt;
 use Illuminate\Database\Eloquent\Model;
@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Alert
- * @package Belt\Convo
+ * @package Belt\Notify
  */
 class Alert extends Model implements
     Belt\Core\Behaviors\SluggableInterface
