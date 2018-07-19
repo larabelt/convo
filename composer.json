@@ -23,6 +23,9 @@
 
   },
   "autoload": {
+    "classmap": [
+      "updates"
+    ],
     "psr-4": {
       "Belt\\Notify\\": "src/"
     }
