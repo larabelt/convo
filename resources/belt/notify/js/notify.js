@@ -1,3 +1,9 @@
+import 'belt/notify/js/bootstrap/inputs';
+import 'belt/notify/js/bootstrap/filters';
+import 'belt/notify/js/bootstrap/functions';
+import 'belt/notify/js/bootstrap/mixins';
+import 'belt/notify/js/bootstrap/tiles';
+
 import alerts from 'belt/notify/js/alerts/routes';
 import store from 'belt/core/js/store/index';
 
@@ -22,7 +28,7 @@ export default class BeltNotify {
 
             router.addRoutes(alerts);
 
-            const app = new Vue({router, store}).$mount('#belt-notify');
+            new Vue({router, store}).$mount('#belt-notify');
         }
     }
 
