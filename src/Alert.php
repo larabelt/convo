@@ -11,9 +11,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package Belt\Notify
  */
 class Alert extends Model implements
+    Belt\Core\Behaviors\IncludesSubtypesInterface,
+    Belt\Core\Behaviors\ParamableInterface,
     Belt\Core\Behaviors\SluggableInterface
 {
 
+    use Belt\Core\Behaviors\IncludesSubtypes;
     use Belt\Core\Behaviors\Sluggable;
     use SoftDeletes;
 
