@@ -3,9 +3,13 @@ import html from 'belt/notify/js/alerts/ctlr/dismissal/template.html';
 
 export default {
     props: {
-        alert: {},
-        class: {},
         id: {},
+        alert: {},
+        _class: {
+            default: function () {
+                return 'alert alert-warning';
+            }
+        },
     },
     data() {
         return {
@@ -15,9 +19,6 @@ export default {
     computed: {
         _alert() {
             return JSON.parse(this.alert);
-        },
-        _class() {
-            return this.class ? this.class : 'alert alert-warning';
         },
         _id() {
             return this.id ? this.id : 'alert-' + this.alert.id;

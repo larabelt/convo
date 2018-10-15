@@ -1,5 +1,5 @@
 <div v-show="show" id="_id" :class="_class" role="alert">
-    <slot name="msg">{{ _alert.name }}: {{ _alert.body }}</slot>
+    <slot name="msg"><span v-html="_alert.name"></span>: <span v-html="_alert.body"></span></slot>
     <span @click="dismiss">
         <slot name="close"><span class="pull-right"><i class="fa fa-times"></i></span></slot>
     </span>
