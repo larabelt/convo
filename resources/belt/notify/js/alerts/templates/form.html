@@ -1,5 +1,6 @@
-<form @submit.prevent="form.submit()" @keydown="form.errors.clear($event.target.name)">
+<form @submit.prevent="submit()" @keydown="form.errors.clear($event.target.name)">
 
+    <input-subtype entity_type="alerts" formKey="form" autoset="true"></input-subtype>
     <div class="row">
         <div class="col-md-6">
             <div class="checkbox">
@@ -87,6 +88,7 @@
         <belt-editor v-model="form.body" @change="form.errors.clear('body')"></belt-editor>
         <span v-for="error in form.error('body')" class="text-danger">{{ error }}</span>
     </div>
+    <input-params v-if="form.id" paramable_type="alerts" :paramable_id="form.id"></input-params>
     <div class="text-right">
         <button class="btn btn-primary" :disabled="form.errors.any()">
             <span v-if="form.saving"><i class="fa fa-spinner fa-pulse fa-fw"></i></span>

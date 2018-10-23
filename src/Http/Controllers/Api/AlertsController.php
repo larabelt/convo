@@ -104,6 +104,8 @@ class AlertsController extends ApiController
     {
         $this->authorize(['view', 'create', 'update', 'delete'], $alert);
 
+        $alert->append(['config']);
+
         return response()->json($alert);
     }
 
@@ -134,6 +136,8 @@ class AlertsController extends ApiController
         ]);
 
         $alert->save();
+
+        $alert->append(['config']);
 
         $this->service()->cache();
 

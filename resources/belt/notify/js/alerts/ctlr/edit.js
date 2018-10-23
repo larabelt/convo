@@ -18,11 +18,16 @@ export default {
         this.form.show(this.entity_id);
     },
     components: {
-
         edit: {
             data() {
                 return {
                     form: this.$parent.form,
+                }
+            },
+            methods: {
+                submit() {
+                    Events.$emit('alerts:' + this.form.id + ':updating', this.form);
+                    this.form.submit();
                 }
             },
             template: form_html,
