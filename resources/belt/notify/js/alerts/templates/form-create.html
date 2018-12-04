@@ -7,7 +7,7 @@
     <input-subtype entity_type="alerts" formKey="form" autoset="true"></input-subtype>
     <div class="row">
         <div class="col-md-6">
-            <input-checkbox column="is_active">Is Active</input-checkbox>
+            <input-psuedo-checkbox column="is_active">Is Active</input-psuedo-checkbox>
             <input-text column="name" required="true">Name</input-text>
             <input-text v-if="form.id" column="slug">Slug</input-text>
         </div>
