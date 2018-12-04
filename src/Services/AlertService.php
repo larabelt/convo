@@ -2,7 +2,7 @@
 
 namespace Belt\Notify\Services;
 
-use Cache;
+use Cache, Translate;
 use Belt\Notify\Alert;
 
 /**
@@ -17,7 +17,7 @@ class AlertService
      */
     public function init()
     {
-        if (!Cache::has('alerts')) {
+        if (!Cache::has($this->cacheKey())) {
             $this->cache();
         }
     }
@@ -35,13 +35,23 @@ class AlertService
     /**
      * Save alerts to cache
      */
+    public function cacheKey()
+    {
+        return sprintf('alerts-%s', Translate::getLocale());
+    }
+
+    /**
+     * Save alerts to cache
+     */
     public function cache()
     {
         $alerts = $this->query()->active()->get();
 
         $alerts = $alerts->keyBy('id');
 
-        Cache::put('alerts', $alerts, 3600);
+        Cache::put($this->cacheKey(), $alerts, 3600);
+
+        return $alerts;
     }
 
 }

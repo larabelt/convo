@@ -28,7 +28,7 @@ class AlertsComposer
 
         $this->service()->init();
 
-        $alerts = Cache::get('alerts');
+        $alerts = Cache::get($this->service()->cacheKey());
 
         if ($alerts && $alerts->count() && $alerts instanceof Collection) {
 
