@@ -13,11 +13,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Alert extends Model implements
     Belt\Core\Behaviors\IncludesSubtypesInterface,
     Belt\Core\Behaviors\ParamableInterface,
-    Belt\Core\Behaviors\SluggableInterface
+    Belt\Core\Behaviors\SluggableInterface,
+    Belt\Core\Behaviors\TranslatableInterface,
+    Belt\Core\Behaviors\TypeInterface
 {
 
     use Belt\Core\Behaviors\IncludesSubtypes;
     use Belt\Core\Behaviors\Sluggable;
+    use Belt\Core\Behaviors\Translatable;
+    use Belt\Core\Behaviors\TypeTrait;
     use SoftDeletes;
 
     /**
@@ -59,6 +63,11 @@ class Alert extends Model implements
         'is_active' => 'boolean',
         'show_url' => 'boolean',
     ];
+
+    /**
+     * @var array
+     */
+    protected $appends = ['morph_class'];
 
     /**
      * @param $value

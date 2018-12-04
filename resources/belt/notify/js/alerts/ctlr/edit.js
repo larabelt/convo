@@ -1,10 +1,7 @@
-// helpers
 import Form from 'belt/notify/js/alerts/form';
-
-// templates make a change
-
+import TranslationStore from 'belt/core/js/translations/store/adapter';
 import edit_html from 'belt/notify/js/alerts/templates/edit.html';
-import form_html from 'belt/notify/js/alerts/templates/form.html';
+import form_html from 'belt/notify/js/alerts/templates/form-edit.html';
 
 export default {
     data() {
@@ -19,10 +16,16 @@ export default {
     },
     components: {
         edit: {
+            mixins: [TranslationStore],
             data() {
                 return {
                     form: this.$parent.form,
+                    entity_type: 'alerts',
+                    entity_id: this.$parent.entity_id,
                 }
+            },
+            created() {
+                this.bootTranslationStore();
             },
             methods: {
                 submit() {
