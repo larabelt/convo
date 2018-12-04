@@ -33,11 +33,12 @@ class AlertService
     }
 
     /**
-     * Save alerts to cache
+     * @param null $code
+     * @return string
      */
-    public function cacheKey()
+    public function cacheKey($code = null)
     {
-        return sprintf('alerts-%s', Translate::getLocale());
+        return sprintf('alerts-%s', $code ?: Translate::getLocale());
     }
 
     /**
@@ -52,6 +53,19 @@ class AlertService
         Cache::put($this->cacheKey(), $alerts, 3600);
 
         return $alerts;
+    }
+
+    /**
+     * @throws \Psr\SimpleCache\InvalidArgumentException
+     */
+    public function clearCache()
+    {
+        foreach (Translate::getAvailableLocales() as $locale) {
+            $code = array_get($locale, 'code');
+            Cache::delete($this->cacheKey($code));
+        }
+
+        Cache::delete($this->cacheKey(config('app.fallback_locale')));
     }
 
 }

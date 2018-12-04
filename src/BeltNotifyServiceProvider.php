@@ -58,6 +58,9 @@ class BeltNotifyServiceProvider extends Belt\Core\BeltServiceProvider
     public function boot(GateContract $gate, Router $router)
     {
 
+        //observers
+        Belt\Notify\Alert::observe(Belt\Notify\Observers\AlertObserver::class);
+
         // set backup view paths
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'belt-notify');
 
