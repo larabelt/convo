@@ -23,8 +23,10 @@ class AlertServiceTest extends Testing\BeltTestCase
      */
     public function test()
     {
+        $this->enableI18n();
+
         # init
-        Cache::shouldReceive('has')->with('alerts')->andReturn(false);
+        Cache::shouldReceive('has')->with('alerts-en_US')->andReturn(false);
         $service = m::mock(AlertService::class . '[cache]');
         $service->shouldReceive('cache')->andReturn(true);
         $service->init();
