@@ -1,0 +1,1 @@
+    - [Alerts](/docs/{{ $version }}/admin/notify/overview)

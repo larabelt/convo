@@ -60,6 +60,7 @@ class BeltNotifyServiceProvider extends Belt\Core\BeltServiceProvider
 
         // set backup view paths
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'belt-notify');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views/docs', 'belt-docs');
 
         // set backup translation paths
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'belt-notify');
