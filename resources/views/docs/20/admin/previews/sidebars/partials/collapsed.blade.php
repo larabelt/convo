@@ -1,0 +1,1 @@
+<li id="notify-admin-sidebar-left-alerts"><a href="/admin/belt/notify/alerts"><i class="fa fa-bullhorn"></i> <span>Alerts</span></a></li>
