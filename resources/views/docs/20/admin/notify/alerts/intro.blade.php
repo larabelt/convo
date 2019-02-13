@@ -17,7 +17,9 @@ To add an Alert to the site, go to Alerts → Add Alerts
 
 Click on "Save." Three Additional sections will appear.
 
-@include('belt-docs::partials.image', ['src' => '20/admin/notify/assets/alert-editor.png'])
+@include('belt-docs::partials.iframe', ['src' => '/docs/preview/notify/2.0/admin/screen?content=editor.alerts&style=content'])
+
+{{--@include('belt-docs::partials.image', ['src' => '20/admin/notify/assets/alert-editor.png'])--}}
 
 The alert can be customized in the following three ways:
 
