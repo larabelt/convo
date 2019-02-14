@@ -4,7 +4,7 @@
 
 To add an Alert to the site, go to Alerts → Add Alerts
 
-@include('belt-docs::partials.table', [
+@include('belt-core::docs.partials.table', [
     'rows' => [
         ['Is Active', 'Check to make the Alert page publicly available.'],
         ['Name', 'Name of Alert'],
@@ -15,6 +15,6 @@ To add an Alert to the site, go to Alerts → Add Alerts
     ],
 ])
 
-@include('belt-docs::partials.image', ['src' => '20/admin/notify/assets/alert-example.png'])
+@include('belt-core::docs.partials.image', ['src' => '20/admin/notify/assets/alert-example.png'])
 
 Click on "Save." Three Additional sections will appear.

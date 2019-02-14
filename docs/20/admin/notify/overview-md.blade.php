@@ -4,8 +4,8 @@
 
 - [](#)
 
-@include('belt-docs::20.admin.notify.alerts.intro')
-@include('belt-docs::20.admin.notify.alerts.manager')
-@include('belt-docs::20.admin.notify.alerts.creator')
-@include('belt-docs::20.admin.notify.alerts.editor')
-@include('belt-docs::20.admin.notify.alerts.subtypes')
+@include('belt-notify::docs.20.admin.alerts.intro')
+@include('belt-notify::docs.20.admin.alerts.manager')
+@include('belt-notify::docs.20.admin.alerts.creator')
+@include('belt-notify::docs.20.admin.alerts.editor')
+@include('belt-notify::docs.20.admin.alerts.subtypes')
