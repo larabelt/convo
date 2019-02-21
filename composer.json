@@ -27,7 +27,8 @@
       "updates"
     ],
     "psr-4": {
-      "Belt\\Notify\\": "src/"
+      "Belt\\Notify\\": "src/",
+      "Tests\\Belt\\Notify\\": "tests/"
     }
   }
 }
