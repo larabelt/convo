@@ -1,7 +1,7 @@
-<?php
+<?php namespace Tests\Belt\Notify\Unit;
 
 use Mockery as m;
-use Belt\Core\Testing\BeltTestCase;
+use Belt\Core\Tests\BeltTestCase;
 use Belt\Notify\Alert;
 use Illuminate\Database\Eloquent\Builder;
 

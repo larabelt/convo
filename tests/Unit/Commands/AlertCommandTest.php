@@ -1,4 +1,4 @@
-<?php
+<?php namespace Tests\Belt\Notify\Unit\Commands;
 
 use Mockery as m;
 use Belt\Notify\Commands\AlertCommand;

@@ -1,9 +1,9 @@
-<?php
+<?php namespace Tests\Belt\Notify\Unit\Http\ViewComposers;
 
 use Mockery as m;
 
 use Belt\Notify\Alert;
-use Belt\Core\Testing\BeltTestCase;
+use Belt\Core\Tests\BeltTestCase;
 use Belt\Notify\Http\ViewComposers\AlertsComposer;
 use Belt\Notify\Services\AlertService;
 use Illuminate\Support\Facades\Cache;

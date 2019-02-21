@@ -1,15 +1,15 @@
-<?php
+<?php namespace Tests\Belt\Notify\Unit\Services;
 
 use Mockery as m;
 
 use Belt\Notify\Alert;
 use Belt\Notify\Services\AlertService;
-use Belt\Core\Testing;
+use Belt\Core\Tests;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 
-class AlertServiceTest extends Testing\BeltTestCase
+class AlertServiceTest extends Tests\BeltTestCase
 {
     public function tearDown()
     {
