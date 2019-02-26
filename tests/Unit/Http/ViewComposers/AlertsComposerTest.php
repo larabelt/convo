@@ -3,7 +3,7 @@
 use Mockery as m;
 
 use Belt\Notify\Alert;
-use Belt\Core\Tests\BeltTestCase;
+use Tests\Belt\Core\BeltTestCase;
 use Belt\Notify\Http\ViewComposers\AlertsComposer;
 use Belt\Notify\Services\AlertService;
 use Illuminate\Support\Facades\Cache;

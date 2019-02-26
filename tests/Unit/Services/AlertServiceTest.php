@@ -4,12 +4,12 @@ use Mockery as m;
 
 use Belt\Notify\Alert;
 use Belt\Notify\Services\AlertService;
-use Belt\Core\Tests;
+use Tests\Belt\Core;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 
-class AlertServiceTest extends Tests\BeltTestCase
+class AlertServiceTest extends \Tests\Belt\Core\BeltTestCase
 {
     public function tearDown()
     {

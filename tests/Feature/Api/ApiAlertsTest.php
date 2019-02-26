@@ -1,9 +1,9 @@
 <?php namespace Tests\Belt\Notify\Feature\Api;
 
-use Belt\Core\Tests;
+use Tests\Belt\Core;
 use Illuminate\Support\Facades\Cache;
 
-class ApiAlertsTest extends Tests\BeltTestCase
+class ApiAlertsTest extends \Tests\Belt\Core\BeltTestCase
 {
 
     public function test()
